@@ -41,6 +41,6 @@ export default function Games() {
     );
 }
 
-function name(params) {
+function continent() {
     
 }
