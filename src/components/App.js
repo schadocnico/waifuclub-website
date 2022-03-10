@@ -4,16 +4,18 @@ import React from 'react';
 import { ReactComponent as Logo } from './waifuClubLogo.svg';
 import Games from './Games';
 
+const root = "waifuclub-website/"
+
 
 
 export default function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Header />}>
+        <Route path={root} element={<Header />}>
           <Route index element={<Home />} />
           <Route path="*" element={<NoMatch />} />
-          <Route path='/games/' element={<Games />}/>
+          <Route path="games" element={<Games />}/>
         </Route>
       </Routes>
     </div>
@@ -26,7 +28,7 @@ function Header() {
       <nav>
         <div className="header">
           <div className="header-contents">
-            <Link to="/">
+            <Link to="">
               <Logo className="Logo" >
                 <a href='' />
               </Logo>
@@ -34,13 +36,13 @@ function Header() {
             <div className="navigation">
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="">Home</Link>
                 </li>
                 <li>
-                  <Link to="/about">About</Link>
+                  <Link to="about">About</Link>
                 </li>
                 <li>
-                  <Link to="/games">Games</Link>
+                  <Link to="games">Games</Link>
                 </li>
               </ul>
             </div>
@@ -73,7 +75,7 @@ function NoMatch() {
           <h1>404</h1>
           <h2>Not Found</h2>
           <p>
-            <Link to="/">Go to the home page</Link>
+            <Link to="">Go to the home page</Link>
           </p>
         </div>
       </div>
