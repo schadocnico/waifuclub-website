@@ -1,18 +1,18 @@
 import './App.css';
 import { Routes, Route, Link, Outlet } from "react-router-dom";
-import React from 'react';
-import { ReactComponent as Logo } from './waifuClubLogo.svg';
+import React, {useState} from 'react';
+import { ReactComponent as Logo } from './img/waifuClubLogo.svg';
+import iconMenu from './img/icon-menu.png'
 import Games from './Games';
+import { useMediaQuery } from "react-responsive";
 
 const root = "waifuclub-website/"
-
-
 
 export default function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path={root} element={<Header />}>
+        <Route path={root} element={<HeaderSmall />}>
           <Route index element={<Home />} />
           <Route path="*" element={<NoMatch />} />
           <Route path="games" element={<Games />}/>
@@ -79,6 +79,47 @@ function NoMatch() {
           </p>
         </div>
       </div>
+    </div>
+  );
+}
+
+function HeaderSmall() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(prev => !prev);
+  }
+
+  return(
+    <div>
+      <nav>
+        <div className="header">
+          <div className="header-contents">
+            <Link to="">
+              <Logo className="Logo" >
+                <a href='' />
+              </Logo>
+            </Link>
+            <div className={"navigation " + (isOpen?"visible":"hidden")} >
+              <ul>
+                <li>
+                  <Link to="">Home</Link>
+                </li>
+                <li>
+                  <Link to="about">About</Link>
+                </li>
+                <li>
+                  <Link to="games">Games</Link>
+                </li>
+              </ul>
+            </div>
+            <div className='antiLogo'>
+              <img className='img-menu' src={iconMenu} onClick={() => handleClick()} />  
+            </div>
+          </div>
+        </div>
+      </nav>
+      <Outlet />
     </div>
   );
 }

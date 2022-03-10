@@ -24,6 +24,7 @@ a {
 
 .antiLogo {
   width: 200px;
+  min-width: 0px;
 }
 
 .navigation {
@@ -68,6 +69,19 @@ nav {
   z-index: 3;
 }
 
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.img-menu {
+  cursor: pointer;
+  vertical-align: left;
+}
+
 /* HOME ---------------------------------------------*/
 
 .db1 {
@@ -79,7 +93,7 @@ nav {
 }
 
 .bg-image {
-  background-image: url(bg-image.jpg);
+  background-image: url(./img/bg-image.jpg);
   background-position: center;
   background-size: cover; /* version standardisée */
   z-index: -1; /* Keep the background behind the content */     

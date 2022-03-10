@@ -40,7 +40,3 @@ export default function Games() {
         </div>
     );
 }
-
-function name(params) {
-    
-}
