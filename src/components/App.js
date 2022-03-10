@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes, Route, Link, Outlet } from "react-router-dom";
 import React from 'react';
-import { ReactComponent as Logo } from './waifuClubLogo.svg';
+import { ReactComponent as Logo } from './img/waifuClubLogo.svg';
 import Games from './Games';
 
 const root = "waifuclub-website/"
