@@ -1,0 +1,13 @@
+.board {
+    background-color: beige;
+    height: calc(100vh - 82px) !important;
+}
+
+.map {
+    height: calc(100vh - 150px) !important;
+    width: 100%;
+}
+
+.searchPays {
+    position: sticky;
+}
