@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6d4e0d00.css",
+    "main.js": "/static/js/main.93ee7f85.js",
+    "static/js/787.68593c42.chunk.js": "/static/js/787.68593c42.chunk.js",
+    "static/media/bg-image.jpg": "/static/media/bg-image.d823a477fb35869ad5df.jpg",
+    "static/media/waifuClubLogo.svg": "/static/media/waifuClubLogo.61809c56f4d08e43671b1bb250ec3e87.svg",
+    "index.html": "/index.html",
+    "main.6d4e0d00.css.map": "/static/css/main.6d4e0d00.css.map",
+    "main.93ee7f85.js.map": "/static/js/main.93ee7f85.js.map",
+    "787.68593c42.chunk.js.map": "/static/js/787.68593c42.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d4e0d00.css",
+    "static/js/main.93ee7f85.js"
+  ]
+}
