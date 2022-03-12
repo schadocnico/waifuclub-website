@@ -33,7 +33,6 @@ const GlobeGame = (props) => {
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
                 width = {600}
                 height = {600}
-                backgroundColor = {null}
                 polygonsData={countries.features.filter(d => countriesInput.includes(d.properties.ADM0_A3))}
                 polygonAltitude={0.01}
                 polygonCapColor={(p) => 'rgba(' + Math.abs(countriesColorInput[p.properties.ADM0_A3]*0.95-255) + ', 0, 0, 0.8)'}
