@@ -37,7 +37,7 @@ export default function Games() {
                     const coo = element.latlng
                     //console.log(randomCountrie.translations.fra.common)
                     setPaysTrouves([...paysTrouves, countrie_name_fr])
-                    setEnvoie([element.cca3, dist, coo]);
+                    setEnvoie([element.cca2, dist, coo]);
                     setValue("");
                     if(dist === 0){
                         setFini(true)

@@ -8,6 +8,7 @@ import {
     interpolateOrRd,
     interpolateGreys,
   } from "d3-scale-chromatic";
+import data from './data/countries_data.json'
 
 const GlobeGame = (props) => {
     const globeEl = useRef();
@@ -21,12 +22,9 @@ const GlobeGame = (props) => {
     }, [props.reset])
 
     useEffect(() => {
-      // load data
-      fetch('https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson').then(res => res.json())
-        .then(countries=> {
-            //console.log(countries)
-            setCountries(countries);
-        });
+        // load data
+        //console.log(data)
+        setCountries(data);
     }, []);
 
     useEffect(() => {
@@ -53,15 +51,15 @@ const GlobeGame = (props) => {
                 width = {700}
                 height = {700}
                 backgroundColor = {"black"}
-                polygonsData={countries.features.filter(d => countriesInput.includes(d.properties.ADM0_A3))}
+                polygonsData={countries.features.filter(d => countriesInput.includes(d.properties.ISO_A2_EH))}
                 polygonAltitude={0.01}
                 toGlobeCoords = {[90, -90]}
                 polygonCapColor={(p) => {
                     const colorScale = scaleSequentialSqrt(interpolateOrRd).domain([360, 0]);
-                    if(countriesColorInput[p.properties.ADM0_A3] === 0){
+                    if(countriesColorInput[p.properties.ISO_A2_EH] === 0){
                         return 'rgb(0, 0, 255)'
                     }
-                    return colorScale(countriesColorInput[p.properties.ADM0_A3]);
+                    return colorScale(countriesColorInput[p.properties.ISO_A2_EH]);
                 }}
                 polygonSideColor={() => 'rgba(0, 100, 0, 0.15)'}
             />
