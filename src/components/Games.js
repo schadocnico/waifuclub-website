@@ -38,7 +38,6 @@ export default function Games() {
     return (
         <div>
             <input className='searchPays' type="search" value={value} onChange={(event) => handleChange(event)} />
-            <p>{paysTrouves.length}/{countries.length}</p>
             <GlobeGame inputCountrie={envoie} />
         </div>
     );
