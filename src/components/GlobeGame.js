@@ -38,6 +38,7 @@ const GlobeGame = (props) => {
     return (
         <div>
             <Globe
+                className="centered-element"
                 ref={globeEl}
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
                 width = {700}

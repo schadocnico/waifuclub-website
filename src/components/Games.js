@@ -36,8 +36,8 @@ export default function Games() {
     }
 
     return (
-        <div>
-            <input className='searchPays' type="search" value={value} onChange={(event) => handleChange(event)} />
+        <div className='centered-element'>
+            <input className='searchPays centered-element' type="search" value={value} onChange={(event) => handleChange(event)} />
             <GlobeGame inputCountrie={envoie} />
         </div>
     );
