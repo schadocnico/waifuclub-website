@@ -11,3 +11,14 @@
 .searchPays {
     position: sticky;
 }
+
+
+input[type=search] {
+    padding: 10px;
+    box-sizing: none;
+    appearance: auto;
+    border-style: none;
+    border-width: 0px;
+    border-color: white;
+    border-image: none;
+}
