@@ -79,7 +79,7 @@ nav {
 }
 
 .bg-image {
-  background-image: url(bg-image.jpg);
+  background-image: url(./img/bg-image.jpg);
   background-position: center;
   background-size: cover; /* version standardisée */
   z-index: -1; /* Keep the background behind the content */     

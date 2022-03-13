@@ -15,39 +15,39 @@ const MapChart = ({ inputValue }) => {
     return (
         <>
         <ComposableMap className="map" data-tip="" projectionConfig={{ scale: 200 }}>
-            <ZoomableGroup>
-            <Geographies geography={geoUrl}>
-                {({ geographies }) =>
-                geographies.map(geo => {
-                    let color = "#D6D6DA"
-                    if(inputValue === geo.properties.ISO_A3) {
-                        pays.push(geo.properties.ISO_A3)
+            <ZoomableGroup >
+                <Geographies geography={geoUrl}>
+                    {({ geographies }) =>
+                    geographies.map(geo => {
+                        let color = "#D6D6DA"
+                        if(inputValue === geo.properties.ISO_A3) {
+                            pays.push(geo.properties.ISO_A3)
+                        }
+                        if(pays.includes(geo.properties.ISO_A3)){
+                            color = "red"
+                        }
+                        return (<Geography
+                            key={geo.rsmKey}
+                            geography={geo}
+                            style={{
+                                default: {
+                                    fill: color,
+                                    outline: "none"
+                                },
+                                hover: {
+                                    fill: color,
+                                    outline: "none"
+                                },
+                                pressed: {
+                                    fill: color,
+                                    outline: "none"
+                                }
+                            }}
+                        />
+                        )
+                    })
                     }
-                    if(pays.includes(geo.properties.ISO_A3)){
-                        color = "red"
-                    }
-                    return (<Geography
-                        key={geo.rsmKey}
-                        geography={geo}
-                        style={{
-                            default: {
-                                fill: color,
-                                outline: "none"
-                            },
-                            hover: {
-                                fill: color,
-                                outline: "none"
-                            },
-                            pressed: {
-                                fill: color,
-                                outline: "none"
-                            }
-                        }}
-                    />
-                    )
-                })
-                }
-            </Geographies>
+                </Geographies>
             </ZoomableGroup>
         </ComposableMap>
         </>
