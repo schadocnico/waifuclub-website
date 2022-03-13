@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/waifuclub-website/static/css/main.8da467a8.css",
-    "main.js": "/waifuclub-website/static/js/main.920b2285.js",
+    "main.js": "/waifuclub-website/static/js/main.ce11e935.js",
     "static/js/787.68593c42.chunk.js": "/waifuclub-website/static/js/787.68593c42.chunk.js",
     "static/media/bg-image.jpg": "/waifuclub-website/static/media/bg-image.d823a477fb35869ad5df.jpg",
     "static/media/waifuClubLogo.svg": "/waifuclub-website/static/media/waifuClubLogo.84ce96697ea932484ad659139082dc50.svg",
     "index.html": "/waifuclub-website/index.html",
     "main.8da467a8.css.map": "/waifuclub-website/static/css/main.8da467a8.css.map",
-    "main.920b2285.js.map": "/waifuclub-website/static/js/main.920b2285.js.map",
+    "main.ce11e935.js.map": "/waifuclub-website/static/js/main.ce11e935.js.map",
     "787.68593c42.chunk.js.map": "/waifuclub-website/static/js/787.68593c42.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8da467a8.css",
-    "static/js/main.920b2285.js"
+    "static/js/main.ce11e935.js"
   ]
 }
