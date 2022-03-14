@@ -22,3 +22,35 @@ input[type=search] {
     border-color: white;
     border-image: none;
 }
+
+.shadow{
+    box-shadow: 0 0.25rem 2.75rem rgb(32 17 46 / 20%), 0 1.125rem 2.25rem -1.125rem rgb(0 0 0 / 24%), 0 1.875rem 3.75rem -0.625rem rgb(0 0 0 / 16%);
+}
+
+.container-game {
+    max-width: 16rem;
+    background-color: #1a1a2e;
+}
+
+.games{
+    padding: 2rem;
+}
+
+.game-image {
+    margin-bottom: 1.5rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 16rem;
+}
+
+.image-game-image {
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-play{
+    padding-bottom: 1rem;
+    text-align: center;
+}

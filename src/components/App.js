@@ -3,10 +3,9 @@ import { Routes, Route, Link, Outlet } from "react-router-dom";
 import React from 'react';
 import { ReactComponent as Logo } from './img/waifuClubLogo.svg';
 import Games from './Games';
+import GlobeGame from './GlobeGame';
 
 const root = "waifuclub-website/"
-
-
 
 export default function App() {
   return (
@@ -16,6 +15,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="*" element={<NoMatch />} />
           <Route path="games" element={<Games />}/>
+          <Route path="games/globeGame" element={<GlobeGame />}/>
         </Route>
       </Routes>
     </div>
@@ -37,9 +37,6 @@ function Header() {
               <ul>
                 <li>
                   <Link to="">Home</Link>
-                </li>
-                <li>
-                  <Link to="about">About</Link>
                 </li>
                 <li>
                   <Link to="games">Games</Link>
