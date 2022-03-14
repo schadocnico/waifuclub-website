@@ -28,29 +28,47 @@ input[type=search] {
 }
 
 .container-game {
-    max-width: 16rem;
     background-color: #1a1a2e;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex: auto;
+    max-width: 300px;
+    min-width: 200px;
 }
 
 .games{
     padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    flex-grow: 2;
+    justify-content: center;
 }
 
 .game-image {
-    margin-bottom: 1.5rem;
     height: 8rem;
-    display: flex;
-    flex-direction: column;
-    max-width: 16rem;
+    width: 100%;
+    display: block;
+    margin-bottom: 2rem;
 }
 
 .image-game-image {
     height: 8rem;
-    display: flex;
-    flex-direction: column;
+    display: block;
+    width: 100%;
+    object-fit: cover;
 }
 
 .game-play{
-    padding-bottom: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     text-align: center;
+}
+
+h3 {
+    margin: 0;
 }
