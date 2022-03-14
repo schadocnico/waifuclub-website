@@ -92,6 +92,10 @@ const GlobeView = (props) => {
         // load data
         //console.log(data)
         setCountries(data);
+        const lat = 0;
+        const lng = 0;
+        const alt = 1;
+        globeEl.current.pointOfView({ lat: 15, lng: 10, altitude: 1.5 })
     }, []);
 
     useEffect(() => {
