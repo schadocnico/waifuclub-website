@@ -1,6 +1,6 @@
 import './App.css';
 import { Routes, Route, Link, Outlet } from "react-router-dom";
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ReactComponent as Logo } from './img/waifuClubLogo.svg';
 import Games from './Games';
 import GlobeGame from './GlobeGame';
@@ -55,6 +55,10 @@ function Header() {
 
 // App.js
 function Home() {
+  useEffect(()=>{
+    document.title = "Home / Waifu Club"
+  }, [])
+  
   return (
     <div>
       <div className="db1 bg-image">

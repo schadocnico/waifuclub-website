@@ -20,6 +20,10 @@ function GlobeGame() {
 
     const [reset, setReset] = useState(false);
 
+    useEffect(()=>{
+        document.title = "Globe Game / Waifu Club"
+    }, [])
+
     let randomReset = () => {
         setRandomCountrie(countries[Math.floor(Math.random() * countries.length)])
         setValue("")
