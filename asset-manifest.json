@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/waifuclub-website/static/css/main.39081024.css",
-    "main.js": "/waifuclub-website/static/js/main.e18c588a.js",
+    "main.js": "/waifuclub-website/static/js/main.cbc10a72.js",
     "static/media/bg-image.jpg": "/waifuclub-website/static/media/bg-image.d823a477fb35869ad5df.jpg",
     "static/media/globegame-header.jpg": "/waifuclub-website/static/media/globegame-header.75e66b32058b02c1e72c.jpg",
     "static/media/waifuClubLogo.svg": "/waifuclub-website/static/media/waifuClubLogo.84ce96697ea932484ad659139082dc50.svg",
     "index.html": "/waifuclub-website/index.html",
     "main.39081024.css.map": "/waifuclub-website/static/css/main.39081024.css.map",
-    "main.e18c588a.js.map": "/waifuclub-website/static/js/main.e18c588a.js.map"
+    "main.cbc10a72.js.map": "/waifuclub-website/static/js/main.cbc10a72.js.map"
   },
   "entrypoints": [
     "static/css/main.39081024.css",
-    "static/js/main.e18c588a.js"
+    "static/js/main.cbc10a72.js"
   ]
 }
