@@ -1,8 +1,8 @@
 {
   "name": "waifu-club",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "http://app.waifuclub.fr/waifuclub-website",
+  "private": false,
+  "homepage": "https://app.waifuclub.fr/waifuclub-website",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
