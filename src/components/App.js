@@ -5,7 +5,7 @@ import { ReactComponent as Logo } from './img/waifuClubLogo.svg';
 import Games from './Games';
 import GlobeGame from './GlobeGame';
 
-const root = "waifuclub-website/"
+const root = "/" //deploy = / else waifuclub-website/
 
 export default function App() {
   return (
