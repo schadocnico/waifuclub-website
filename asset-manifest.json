@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.83ea366d.css",
-    "main.js": "/static/js/main.bd5d9cc7.js",
+    "main.js": "/static/js/main.adca3bb7.js",
     "static/media/bg-image.jpg": "/static/media/bg-image.d823a477fb35869ad5df.jpg",
     "static/media/globegame-header.jpg": "/static/media/globegame-header.75e66b32058b02c1e72c.jpg",
     "static/media/waifuClubLogo.svg": "/static/media/waifuClubLogo.84ce96697ea932484ad659139082dc50.svg",
     "index.html": "/index.html",
     "main.83ea366d.css.map": "/static/css/main.83ea366d.css.map",
-    "main.bd5d9cc7.js.map": "/static/js/main.bd5d9cc7.js.map"
+    "main.adca3bb7.js.map": "/static/js/main.adca3bb7.js.map"
   },
   "entrypoints": [
     "static/css/main.83ea366d.css",
-    "static/js/main.bd5d9cc7.js"
+    "static/js/main.adca3bb7.js"
   ]
 }
