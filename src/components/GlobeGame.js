@@ -61,7 +61,7 @@ function GlobeGame() {
 
     if(fini){
         return (
-            <div className='centered-element bg-image db1'>
+            <div className='centered-element db1'>
                 <div className='centered-element'>
                     <p className='centered-element'>Pays Trouvé : {randomCountrie.translations.fra.common}</p>
                     <input className='centered-element' type="button" value="Rejouer ?" onClick={(e) => randomReset()} />
@@ -71,7 +71,7 @@ function GlobeGame() {
         );
     }else {
         return (
-            <div className='centered-element bg-image db1'>
+            <div className='centered-element db1'>
                 <div className='centered-element' style={{paddingTop: '25px'}}>
                     <input className='searchPays centered-element' type="search" value={value} onChange={(event) => handleChange(event)} />
                     <GlobeView inputCountrie={envoie} reset={reset}/>
@@ -106,9 +106,7 @@ const GlobeView = (props) => {
         if(props.inputCountrie[0]){
             setCountriesInput([...countriesInput, props.inputCountrie[0]])
             setCountriesColorInput({...countriesColorInput, [props.inputCountrie[0]]: props.inputCountrie[1]})
-            const lat = props.inputCountrie[2][0];
-            const lng = props.inputCountrie[2][1];
-            globeEl.current.pointOfView({ lat, lng }, 200)
+            globeEl.current.pointOfView({ lat: props.inputCountrie[2][0], lng: props.inputCountrie[2][1]}, 200)
         }
     }, [props.inputCountrie]);
 
