@@ -13,29 +13,24 @@ function Games() {
 
     return(
         <div className='db1 bg-image'>
-            <div className='games'>
-                <Game />
+            <div className='games-container'>
+                <div className='games'>
+                    <GlobeGame />
+                </div>
             </div>
         </div>
     );
 }
 
-function Game() {
+function GlobeGame() {
     return(
-        <div className='container-game shadow'>
-            <div className='game-image'>
-                <img className='image-game-image' src={globeGameHeaderLogo}>
-                </img>
+        <Link to="globeGame">
+            <div className='container-game shadow'>
+                <div className='game-image'>
+                    <img className='image-game-image' src={globeGameHeaderLogo}/>
+                </div>
             </div>
-            <h3 style={{textAlign: "center"}}>
-                Globe Game
-            </h3>
-            <div className='game-play'>
-                <Link to="globeGame">
-                    <input type="button" value="PLAY" loading="eager"/>
-                </Link>
-            </div>
-        </div>
+        </Link>
     );
 }
 

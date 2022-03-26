@@ -3,15 +3,40 @@ body {
   radial-gradient(66.5% 150.21% at 115.03% -21.44%,rgba(207, 32, 32, 0.4) 0%,rgba(161,155,217,0) 92.09%),
   radial-gradient(93.54% 126.91% at 29.15% -56.29%,rgba(119, 119, 119, 0.7) 0%,rgba(233,69,96,0) 92.09%),
   radial-gradient(86.19% 150.84% at -0.13% -24.8%,rgba(1, 27, 112, 0.7) 0%,rgba(0,162,254,0) 92.09%), rgb(7, 1, 12);
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-attachment: fixed;
   margin: 0, 0, 0, 0;
   border: 0, 0, 0, 0;
   color: aliceblue;
-  font-family: Montserrat,sans-serif;
+  font-family: "Open Sans",Lato,sans-serif !important;
+  overflow-y: hidden;
+}
+
+.content::-webkit-scrollbar-thumb {
+  /*border-radius: 10px;*/
+  border: 2px auto;
+  /* border: 2px solid var(--scrollbar-bg,auto); */
+  background: rgb(47, 47, 47);
+}
+
+.content::-webkit-scrollbar {
+  width: 12px;
+  max-height: 50px;
+  background-color: rgb(20, 20, 20);
+  /*border-radius: 10px;*/
 }
 
 a {
   color: whitesmoke;
   white-space:nowrap;
+}
+
+.content {
+  overflow-y: auto;
+  height: 100vh !important;
+  position: relative;
+  top: -83px;
 }
 
 /* HEADER ---------------------------------------------*/
@@ -33,6 +58,9 @@ a {
   display: flex;
   flex: none;
   width: 50%;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .navigation li {
@@ -51,34 +79,39 @@ a {
   color: whitesmoke;
   text-decoration: none;
   white-space:nowrap;
+  transition: .2s;
+}
+
+.navigation a:hover {
+  color: #e291e8;
+  transition: .2s;
 }
 
 .header {
   height: auto;
   width: 100%;
   /*background-color: rgba(0, 0, 0, 0.75);*/
-  backdrop-filter: blur(12px);
+  /*backdrop-filter: blur(12px);*/
   border-style: solid;
   border-width: 0 0 1px;
-  border-color: rgba(255,255,255,.05);
-
-  transition: transform .8s cubic-bezier(.65,.05,.36,1),background .8s cubic-bezier(.65,.05,.36,1);
+  border-color: rgba(47, 47, 47, 0.5);
+  transition: transform .4s cubic-bezier(.65,.05,.36,1),background .4s cubic-bezier(.65,.05,.36,1);
   background: none;
 }
 
 .header-black {
   background: rgb(0,0,0);
-  transition: transform .8s cubic-bezier(.65,.05,.36,1),background .8s cubic-bezier(.65,.05,.36,1);
+  border-width: 0;
+  transition: transform .4s cubic-bezier(.65,.05,.36,1),background .4s cubic-bezier(.65,.05,.36,1);
 }
 
 .header .header-contents {
   padding: 1em;
   display: flex;
   height: 50px;
-  justify-content: center;
-  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  justify-content: space-between
 }
 
 .header-contents>a{
@@ -107,11 +140,20 @@ nav {
 /* HOME ---------------------------------------------*/
 
 .db1 {
-  min-height: calc(100vh - 83px) !important;
   width: 100%;
   display: block;
   box-sizing: border-box;
+  padding-top: 83px;
 }
+
+.vh {
+  min-height: 100vh !important;
+}
+
+.vh-header {
+  min-height: calc(100vh - 83px) !important;
+}
+
 
 .conteneur {
   margin: 0px;
@@ -156,6 +198,19 @@ nav {
 
 .justify-content-center {
   justify-content: center!important;
+}
+
+/* HOME ---------------------------------------------- */
+
+.home1 {
+  background-image: url("./img/bg-image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.copie-discord{
+  position: absolute;
 }
 
 /* 404 ----------------------------------------------- */
