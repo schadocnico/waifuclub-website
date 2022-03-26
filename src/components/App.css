@@ -11,6 +11,8 @@ body {
   color: aliceblue;
   font-family: "Open Sans",Lato,sans-serif !important;
   overflow-y: hidden;
+  width: 100vw;
+  height: 100vh;
 }
 
 .content::-webkit-scrollbar-thumb {
@@ -34,8 +36,9 @@ a {
 
 .content {
   overflow-y: auto;
-  height: 100vh !important;
+  height: 100vh; 
   position: relative;
+  width: 100vw;
   top: -83px;
 }
 
@@ -209,8 +212,44 @@ nav {
   background-size: cover;
 }
 
+.home2{
+  height: 200vh;
+}
+
 .copie-discord{
   position: absolute;
+}
+
+.fixed-parcho {
+  overflow: hidden;
+  left: calc(50%);
+  transform: translateX(calc(-1*50% - 6px));
+  position: fixed;
+  top: 83px;
+}
+
+.inherit-parcho {
+  overflow: hidden;
+  position: inherit;
+  top: 83px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.parcho {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.after-parcho{
+  padding-top: calc(200vh + 12px);
+  position: absolute;
+  justify-content: center;
+  left: calc(50%);
+  transform: translateX(calc(-1*50%));
 }
 
 /* 404 ----------------------------------------------- */

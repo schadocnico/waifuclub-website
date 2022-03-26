@@ -103,18 +103,45 @@ function Home(props) {
   }, [])
 
   const [heightParcho, setHeightParcho] = useState(80)
+  const [displayParcho, setDisplayParcho] = useState('inherit')
+  const [topParcho, setTopParcho] = useState('')
   useEffect(() => {
-    setHeightParcho(Math.min((500*props.scrollPx/window.innerHeight-40)+80, 500))
+    if (props.scrollPx > window.innerHeight-83 && props.scrollPx < 2*window.innerHeight) {
+      if(displayParcho === 'inherit'){
+        setDisplayParcho('fixed')
+      }
+      if (topParcho === 'after-parcho') {
+        setTopParcho('')
+      }
+      let b = 80;
+      let a = (500-b)/(2*window.innerHeight-window.innerHeight-83)
+      let x = window.innerHeight-83 - props.scrollPx
+      setHeightParcho(Math.min(-a*x+b, 500))
+    } else{
+      if (displayParcho === 'fixed') {
+        setDisplayParcho('inherit')
+      }
+      if (props.scrollPx > 2*window.innerHeight) {
+        setTopParcho('after-parcho')
+      }else{
+        setTopParcho('')
+      }
+    }
   }, [props.scrollPx])
   
   return (
       <div className='content-in'>
         <div className="db1 vh home1">
         </div>
-        <div className="vh-header">
-          <div className='clipzone' style={{position: 'center', marginLeft: 'auto', marginRight: 'auto', width: '350px', height: heightParcho+'px', overflow: 'hidden'}}>
-            <img src={paco} alt="paco" className='parcho' style={{}}></img>
+        <div className="vh-header home2">
+          <div style={{position: 'center'}}>
+            <div className={displayParcho+'-parcho '+topParcho} style={{height:heightParcho+'px'}}>
+                <img src={paco} alt="paco" className='parcho' style={{}}></img>
+            </div>
           </div>
+          
+        </div>
+        <div className="vh-header" style={{backgroundColor: "black"}}>
         </div>
       </div>
   );
