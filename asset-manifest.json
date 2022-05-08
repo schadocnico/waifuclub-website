@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.e1b0792d.css",
-    "main.js": "/static/js/main.49454839.js",
+    "main.css": "/static/css/main.cfbf9f75.css",
+    "main.js": "/static/js/main.9e566f5b.js",
     "static/js/787.68593c42.chunk.js": "/static/js/787.68593c42.chunk.js",
+    "static/media/mx5-video.mp4": "/static/media/mx5-video.f744aca20c0a28c81647.mp4",
     "static/media/bg-image.jpg": "/static/media/bg-image.d823a477fb35869ad5df.jpg",
+    "static/media/mx5-bandeau.png": "/static/media/mx5-bandeau.c652acc784d2d877bfd0.png",
     "static/media/globegame-header.jpg": "/static/media/globegame-header.32703f20499c7910159f.jpg",
-    "static/media/parco1.png": "/static/media/parco1.4557055e7744d8dbe704.png",
     "static/media/waifuClubLogo.svg": "/static/media/waifuClubLogo.84ce96697ea932484ad659139082dc50.svg",
     "index.html": "/index.html",
-    "main.e1b0792d.css.map": "/static/css/main.e1b0792d.css.map",
-    "main.49454839.js.map": "/static/js/main.49454839.js.map",
+    "main.cfbf9f75.css.map": "/static/css/main.cfbf9f75.css.map",
+    "main.9e566f5b.js.map": "/static/js/main.9e566f5b.js.map",
     "787.68593c42.chunk.js.map": "/static/js/787.68593c42.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1b0792d.css",
-    "static/js/main.49454839.js"
+    "static/css/main.cfbf9f75.css",
+    "static/js/main.9e566f5b.js"
   ]
 }
