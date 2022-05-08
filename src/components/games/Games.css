@@ -1,0 +1,78 @@
+.board {
+    height: calc(100vh - 82px) !important;
+}
+
+.map {
+    height: calc(100vh - 150px) !important;
+    width: 100%;
+}
+
+.searchPays {
+    position: sticky;
+}
+
+
+input[type=search] {
+    padding: 10px;
+    box-sizing: none;
+    appearance: auto;
+    border-style: none;
+    border-width: 0px;
+    border-color: white;
+    border-image: none;
+}
+
+.shadow{
+    box-shadow: 0 0.25rem 2.75rem rgb(32 17 46 / 20%), 0 1.125rem 2.25rem -1.125rem rgb(0 0 0 / 24%), 0 1.875rem 3.75rem -0.625rem rgb(0 0 0 / 16%);
+}
+
+.games>a {
+    width: calc(33.33333% - 30px);
+    margin: 15px;
+}
+
+.container-game {
+    background-color: #1a1a2e;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex: auto;
+    transition: .3s;
+}
+
+.container-game:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.games-container {
+    max-width: 1200px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.games{
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 2;
+    justify-content: center;
+}
+
+.game-image {
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
+.image-game-image {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}

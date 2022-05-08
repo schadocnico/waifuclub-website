@@ -10,19 +10,17 @@ body {
   border: 0, 0, 0, 0;
   color: aliceblue;
   font-family: "Open Sans",Lato,sans-serif !important;
-  overflow-y: hidden;
-  width: 100vw;
-  height: 100vh;
+  overflow-x: hidden;
 }
 
-.content::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   /*border-radius: 10px;*/
   border: 2px auto;
   /* border: 2px solid var(--scrollbar-bg,auto); */
   background: rgb(47, 47, 47);
 }
 
-.content::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 12px;
   max-height: 50px;
   background-color: rgb(20, 20, 20);
@@ -34,15 +32,18 @@ a {
   white-space:nowrap;
 }
 
-.content {
-  overflow-y: auto;
-  height: 100vh; 
-  position: relative;
-  width: 100vw;
-  top: -83px;
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main-container {
+  flex: 1;
 }
 
 /* HEADER ---------------------------------------------*/
+
 .Logo {
   border: 0px;
   padding-top: 5px;
@@ -140,6 +141,20 @@ nav {
   margin: auto;
 }
 
+/* FOOTER -------------------------------------------*/
+
+.footer-container {
+  height: 200px;
+  background-color: black;
+}
+
+/* UTILS --------------------------------------------*/
+
+.first-container {
+  margin-top: -83px;
+  padding-top: 83px;
+}
+
 /* HOME ---------------------------------------------*/
 
 .db1 {
@@ -201,55 +216,6 @@ nav {
 
 .justify-content-center {
   justify-content: center!important;
-}
-
-/* HOME ---------------------------------------------- */
-
-.home1 {
-  background-image: url("./img/bg-image.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.home2{
-  height: 200vh;
-}
-
-.copie-discord{
-  position: absolute;
-}
-
-.fixed-parcho {
-  overflow: hidden;
-  left: calc(50%);
-  transform: translateX(calc(-1*50% - 6px));
-  position: fixed;
-  top: 83px;
-}
-
-.inherit-parcho {
-  overflow: hidden;
-  position: inherit;
-  top: 83px;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.parcho {
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.after-parcho{
-  padding-top: calc(200vh + 12px);
-  position: absolute;
-  justify-content: center;
-  left: calc(50%);
-  transform: translateX(calc(-1*50%));
 }
 
 /* 404 ----------------------------------------------- */

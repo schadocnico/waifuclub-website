@@ -2,9 +2,10 @@ import './App.css';
 import { Routes, Route, Link, Outlet } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import { ReactComponent as Logo } from './img/waifuClubLogo.svg';
-import paco from './img/dynamique/parco1.png'
-import Games from './Games';
-import GlobeGame from './GlobeGame';
+import Games from './games/Games';
+import GlobeGame from './games/GlobeGame';
+import Home from './home/Home';
+import Racing from './racing/Racing';
 
 const root = "/" //deploy = / else waifuclub-website/
 
@@ -16,10 +17,9 @@ export default function App() {
 
   const [lastPos, setLastPos] = useState(0)
   useEffect(() => {
-    window.document.getElementsByClassName('content')[0].addEventListener('scroll', function(e) {
-      //avant_derniere = derniere_position_de_scroll_connue;
-      derniere_position_de_scroll_connue = window.document.getElementsByClassName('content')[0].scrollTop;
-      //console.log(derniere_position_de_scroll_connue)
+    window.onscroll = function(e) {
+      //console.log(e)
+      derniere_position_de_scroll_connue = window.scrollY;
     
       if (!ticking) {
         window.requestAnimationFrame(function() {
@@ -29,7 +29,7 @@ export default function App() {
       }
     
       ticking = true;
-    })
+    };
   }, [])
 
 
@@ -40,6 +40,7 @@ export default function App() {
           <Route index element={<Home scrollPx={lastPos}/>} />
           <Route path="*" element={<NoMatch />} />
           <Route path="games" element={<Games />}/>
+          <Route path="racing" element={<Racing />}/>
           <Route path="games/globeGame" element={<GlobeGame />}/>
         </Route>
       </Routes>
@@ -48,7 +49,6 @@ export default function App() {
 }
 
 function Header(props) {
-
   const [isBlack, setIsBlack] = useState("");
   useEffect(() => {
     faireQuelqueChose(props.scrollPx)
@@ -65,7 +65,7 @@ function Header(props) {
   }
 
   return(
-    <div>
+    <div className='container'>
       <nav>
         <div className={"header" + isBlack}>
           <div className="header-contents">
@@ -80,6 +80,9 @@ function Header(props) {
                   <Link to="">Home</Link>
                 </li>
                 <li>
+                  <Link to="racing">Racing</Link>
+                </li>
+                <li>
                   <Link to="games">Games</Link>
                 </li>
               </ul>
@@ -89,63 +92,22 @@ function Header(props) {
           </div>
         </div>
       </nav>
-      <div className='content'>
+      <div className='main-container'>
         <Outlet />
       </div>
+      <Footer />
     </div>
   );
 }
 
-// App.js
-function Home(props) {
-  useEffect(()=>{
-    document.title = "Home / Waifu Club"
-  }, [])
-
-  const [heightParcho, setHeightParcho] = useState(80)
-  const [displayParcho, setDisplayParcho] = useState('inherit')
-  const [topParcho, setTopParcho] = useState('')
-  useEffect(() => {
-    if (props.scrollPx > window.innerHeight-83 && props.scrollPx < 2*window.innerHeight) {
-      if(displayParcho === 'inherit'){
-        setDisplayParcho('fixed')
-      }
-      if (topParcho === 'after-parcho') {
-        setTopParcho('')
-      }
-      let b = 80;
-      let a = (500-b)/(2*window.innerHeight-window.innerHeight-83)
-      let x = window.innerHeight-83 - props.scrollPx
-      setHeightParcho(Math.min(-a*x+b, 500))
-    } else{
-      if (displayParcho === 'fixed') {
-        setDisplayParcho('inherit')
-      }
-      if (props.scrollPx > 2*window.innerHeight) {
-        setTopParcho('after-parcho')
-      }else{
-        setTopParcho('')
-      }
-    }
-  }, [props.scrollPx])
-  
+function Footer() {
   return (
-      <div className='content-in'>
-        <div className="db1 vh home1">
-        </div>
-        <div className="vh-header home2">
-          <div style={{position: 'center'}}>
-            <div className={displayParcho+'-parcho '+topParcho} style={{height:heightParcho+'px'}}>
-                <img src={paco} alt="paco" className='parcho' style={{}}></img>
-            </div>
-          </div>
-          
-        </div>
-        <div className="vh-header" style={{backgroundColor: "black"}}>
-        </div>
-      </div>
+    <div className='footer-container'>
+
+    </div>
   );
 }
+
 
 function NoMatch() {
   return (
